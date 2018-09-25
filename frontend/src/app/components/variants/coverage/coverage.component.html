@@ -1,0 +1,11 @@
+<div class="coverage">
+	<div class="coverage__title" pTooltip="{{coverage.description}}">
+		{{ coverage.name + ' ' + coverage.code }}
+	</div>
+	<div class="coverage__text">
+		{{ coverage.limitLeft | number:'1.2-2' }} <span *ngIf="coverage.limitRight">/ {{ coverage.limitRight | number:'1.2-2' }}</span>
+	</div>
+	<div class="coverage__sum">
+		{{ coverage.premium | number:'1.2-2' }}
+	</div>
+</div>

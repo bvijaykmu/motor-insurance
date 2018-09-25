@@ -1,0 +1,17 @@
+@import '../../../../styles/variables';
+
+.discount {
+  border-top: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  padding: 10px 15px;
+
+  &__name {
+	font-size: 0.8125rem;
+	display: inline-block;
+  }
+
+  &__value {
+	font-weight: bold;
+	float: right;
+  }
+}

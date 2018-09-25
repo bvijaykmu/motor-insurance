@@ -1,0 +1,113 @@
+@import "../../../styles/variables";
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: white;
+  display: inline-block;
+
+  &__header {
+	box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.25);
+	padding: 20px 15px 15px 15px;
+
+	&__logo {
+	  display: inline-block;
+	}
+
+	&__toggle {
+	  float: right;
+	  font-size: 1.625rem;
+	  line-height: 38px;
+	  padding-top: 2px;
+	  color: $hyperonBlue;
+
+	  &:hover {
+		cursor: pointer;
+	  }
+	}
+  }
+
+  &__sectionHeader {
+	margin: 50px 0 30px 0;
+	text-align: center;
+	font-size: 1.625rem;
+	color: $hyperonBlue;
+	border-bottom: 1px solid $secondaryGrey;
+	padding: 0 0 5px 0;
+  }
+
+  &__subSectionHeader {
+	border-bottom: 1px solid $secondaryGrey;
+	padding: 0 0 10px 0;
+	color: $primaryGrey;
+	margin: 20px 0;
+	font-size: 0.8rem;
+  }
+
+  &__sectionContent {
+	padding: 0 15px;
+  }
+}
+
+.formInput {
+  position: relative;
+  margin: 0 0 20px 0;
+
+  &__container {
+	width: 100%;
+  }
+
+  &__input {
+	border: 1px solid $secondaryGrey !important;
+	height: 42px;
+	border-radius: 3px;
+	width: 100%;
+	padding: 0 10px;
+
+	&:focus {
+	  outline: $hyperonBlue auto 5px !important;
+	}
+  }
+
+  &__selectBox {
+	width: 100%;
+
+	.ui-button {
+	  width: 50%;
+	  height: 42px;
+	  line-height: 42px;
+	  color: $primaryGrey !important;
+	}
+  }
+
+  &__label {
+	position: absolute;
+	top: -5px;
+	left: 5px;
+	padding: 0 10px 0 5px;
+	background: white;
+	font-size: 0.5625rem;
+	text-transform: uppercase;
+	color: $hyperonBlue;
+	z-index: 2;
+  }
+}
+
+.formDropdown {
+  position: relative;
+  margin: 0 0 20px 0;
+
+  &__dropdown {
+	height: 42px;
+	width: 100%;
+	border: 1px solid $secondaryGrey !important;
+
+	&.ui-dropdown-open {
+	  border-color: $hyperonBlue !important;
+	}
+  }
+}

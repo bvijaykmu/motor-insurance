@@ -1,0 +1,29 @@
+<div class="sidebar__sectionHeader">
+	<fa-icon [icon]="faCar"></fa-icon>
+</div>
+<div class="sidebar__sectionContent">
+	<div class="formDropdown">
+		<label class="formInput__label">production years</label>
+		<p-dropdown [options]="productionYearList" [(ngModel)]="vehicle.productionYear" name="productionYear"
+		            optionLabel="name"
+		            styleClass="formDropdown__dropdown" [autoWidth]="false"></p-dropdown>
+	</div>
+	<div class="formDropdown">
+		<label class="formInput__label">make</label>
+		<p-dropdown [options]="makeList" [(ngModel)]="vehicle.makeId" name="makeId" styleClass="formDropdown__dropdown"
+		            optionLabel="name"
+		            [autoWidth]="false"></p-dropdown>
+	</div>
+	<div class="formDropdown">
+		<label class="formInput__label">type</label>
+		<p-dropdown [options]="typeList" [(ngModel)]="vehicle.typeId" name="typeId" styleClass="formDropdown__dropdown"
+		            optionLabel="name"
+		            [autoWidth]="false"></p-dropdown>
+	</div>
+	<div class="formDropdown">
+		<label class="formInput__label">model</label>
+		<p-dropdown [options]="modelList" [(ngModel)]="vehicle.modelId" name="modelId"
+		            styleClass="formDropdown__dropdown" optionLabel="name"
+		            panelStyleClass="formDropdown__dropDownList" [autoWidth]="false"></p-dropdown>
+	</div>
+</div>

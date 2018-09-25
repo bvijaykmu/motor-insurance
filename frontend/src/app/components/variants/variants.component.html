@@ -1,0 +1,26 @@
+<div class="variantsContainer">
+	<div class="variant" *ngFor="let variant of variants">
+		<span class="variant__title">
+			{{ variant.code }}
+		</span>
+		<div class="variant__coverages">
+			<div *ngFor="let coverage of variant.coverages">
+				<app-coverage [coverage]="coverage">
+				</app-coverage>
+			</div>
+		</div>
+		<div class="variant__beforeDiscount">
+			<div class="variant__beforeDiscount__label">PRICE BEFORE DISCOUNTS</div>
+			<div class="variant__beforeDiscount__value">{{ variant.premiumBeforeDiscounts | number:'1.2-2' }}</div>
+		</div>
+		<div class="variant__discount">
+			<div *ngFor="let discount of variant.discounts">
+				<app-discount [discount]="discount"></app-discount>
+			</div>
+		</div>
+		<div class="variant__finalPrice">
+			<div class="variant__finalPrice__label">FINAL PRICE</div>
+			<div class="variant__finalPrice__value">{{ variant.premium }}</div>
+		</div>
+	</div>
+</div>

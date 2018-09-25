@@ -1,0 +1,46 @@
+<div class="sidebar__sectionHeader" *ngIf="driver">
+  <fa-icon [icon]="faUser"></fa-icon>
+</div>
+<div class="sidebar__sectionContent">
+  <div class="formInput">
+    <input class="formInput__input" type="text" size="30" pInputText [(ngModel)]="driver.firstName">
+    <label class="formInput__label">first name</label>
+  </div>
+  <div class="formInput">
+    <input class="formInput__input" type="text" size="30" pInputText [(ngModel)]="driver.lastName">
+    <label class="formInput__label">last name</label>
+  </div>
+  <div class="formInput">
+    <p-calendar [(ngModel)]="driver.dateOfBirth"
+                dateFormat="dd.mm.yy"
+                styleClass="formInput__container"
+                inputStyleClass="formInput__input">
+    </p-calendar>
+    <label class="formInput__label">date of birth</label>
+  </div>
+  <div class="formSelect">
+    <p-selectButton [options]="genderList" [(ngModel)]="driver.gender" styleClass="formInput__selectBox">
+      <ng-template let-item>
+        <div>
+          <fa-icon [icon]=item.icon></fa-icon>
+          <span>{{ item.label }}</span>
+        </div>
+      </ng-template>
+    </p-selectButton>
+  </div>
+  <div class="sidebar__subSectionHeader">
+    <span>Address</span>
+  </div>
+  <div class="formInput">
+    <input class="formInput__input" type="text" size="30" pInputText [(ngModel)]="driver.address.zipCode">
+    <label class="formInput__label">zip code</label>
+  </div>
+  <div class="formInput">
+    <input class="formInput__input" type="text" size="30" pInputText [(ngModel)]="driver.address.city">
+    <label class="formInput__label">city</label>
+  </div>
+  <div class="formInput">
+    <input class="formInput__input" type="text" size="30" pInputText [(ngModel)]="driver.address.street">
+    <label class="formInput__label">street</label>
+  </div>
+</div>

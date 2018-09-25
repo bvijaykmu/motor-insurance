@@ -1,0 +1,18 @@
+<div class="sidebar__sectionHeader">
+	<fa-icon [icon]="faFile"></fa-icon>
+</div>
+<div class="sidebar__sectionContent">
+	<div class="formInput">
+		<input class="formInput__input" type="number" pKeyFilter="int" [(ngModel)]="driverHistory.numberOfAccidents"/>
+		<label class="formInput__label">number of accidents in the last 5 years</label>
+	</div>
+	<div class="formInput">
+		<input class="formInput__input" type="number" pKeyFilter="int" [(ngModel)]="driverHistory.numberOfTickets"/>
+		<label class="formInput__label">number of traffic tickets in the last 5 years</label>
+	</div>
+	<div class="formInput">
+		<input class="formInput__input" type="number" pKeyFilter="int" min="16"
+		       [(ngModel)]="driverHistory.licenceObtainedAtAge"/>
+		<label class="formInput__label">driver's age when driver license was obstained</label>
+	</div>
+</div>
