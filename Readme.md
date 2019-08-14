@@ -80,8 +80,9 @@ For building image execute code below:
 docker build -t motor-demo .
 ```
 Build is optional since motor-demo is available on docker hub:
+https://hub.docker.com/r/hyperonio/motor-demo
 ```text
-hyperonio/motor-demo:latest
+docker pull hyperonio/motor-demo
 ```
 If image is build, then application can be run in docker container like:
 ```text
